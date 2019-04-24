@@ -39,7 +39,6 @@ class Home extends React.Component {
     this.setState({filter: filter})
   }
 
-
   render() {
     return(
       <section>
@@ -80,7 +79,6 @@ class Home extends React.Component {
       </section>
     )
   }
-
 }
 
 export default Home

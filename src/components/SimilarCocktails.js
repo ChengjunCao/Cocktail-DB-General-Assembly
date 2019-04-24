@@ -19,14 +19,15 @@ class SimilarCocktails extends React.Component {
     this.getData()
   }
 
-  getData() {
-
-    console.log(this.props.ingredients)
-
+  getData(){
     const randomIngredient = this.props.ingredients[Math.floor(Math.random() * this.props.ingredients.length)]
 
-    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${randomIngredient.drink}`)
-      .then(res =>{
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php', {
+      params: {
+        i: randomIngredient.drink
+      }
+    })
+      .then(res => {
         const drinks = res.data.drinks.slice(0,5)
         this.setState({ data: drinks })
       })

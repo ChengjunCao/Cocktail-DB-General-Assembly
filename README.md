@@ -8,7 +8,7 @@
 # Technologies used
 * React
 * Webpack
-* Axios
+* Ajax
 * JavaScript (ES6)
 * HTML5
 * Bulma (CSS framework)

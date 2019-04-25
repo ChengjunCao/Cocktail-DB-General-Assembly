@@ -11,11 +11,12 @@
 * Axios
 * JavaScript (ES6)
 * HTML5
+* Bulma (CSS framework)
 * SCSS
 * GitHub
 
 ## Cocktail DB API - React project
-This was a pair-coding, hackathon project undertaken with [Aiman Mallah](https://github.com/aimanmallah) at General Assembly.
+This was a pair-coding, hackathon project with [Aiman Mallah](https://github.com/aimanmallah) at General Assembly.
 
 The brief was to:
 * Consume a publicly available API
@@ -23,11 +24,11 @@ The brief was to:
 
 The project consumes data from [CocktailDB API](https://www.thecocktaildb.com/api.php).
 
-The site can be run locally by cloning the repository and type ```npm i``` and then ```npm run serve``` in the terminal.
+The site can be run locally by cloning the repository and typing ```npm i``` and then ```npm run serve``` in the terminal.
 
 ### App overview
 
-The application allow a user to search for a cocktail by single ingredient or name of the cocktail, returning the results under the search input.
+The application allows a user to search for a cocktail by single ingredient or name of the cocktail, returning the results under the search input.
 
 Clicking on a cocktail provides information on the ingredients and instructions on how to make the cocktail.
 
@@ -41,9 +42,9 @@ Three endpoints were chosen:
 * Search by name: https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 * Random cocktail: https://www.thecocktaildb.com/api/json/v1/1/random.php
 
-The main page comprised four components ```Home.js```, ```NavBar.js```, ```RandomCocktail.js``` and ```CocktailIndex.js```.
+The main page is rendered from four components ```Home.js```, ```NavBar.js```, ```RandomCocktail.js``` and ```CocktailIndex.js```.
 
-Choosing from the radio buttons (ingredient or name) set a search variable which was appended to the api call. A ternary operator allowed us to refactor the code to a simple statement and ```scrollIntoView``` was used on submit to maximise the number of results on the page:
+Choosing from the radio buttons (ingredient or name) sets a search variable which was appended to the api call. A ternary operator allowed us to refactor the code to a simple statement and ```scrollIntoView``` was used on submit to maximise the number of results on the page:
 
 ```
 handleSubmit(e) {
@@ -58,7 +59,7 @@ handleSubmit(e) {
 
 #### Cocktail detail page
 
-The delivery of the ingredients was a challenge because the data from the API was unstructured with many empty or null values and the drinks and measures separated in to different key: value pairs.
+The delivery of the ingredients was a challenge because the data from the API was unstructured with many empty or null values, and the drinks and measures separated in to different key: value pairs.
 
 This was resolved by filtering the response data:
 
@@ -104,7 +105,7 @@ getData(){
 
 ##### Similar cocktails
 
-The similar cocktails component was created by randomly choosing an ingredient from the cocktail on show and using this ingredient to call make another API call.
+The similar cocktails component was created by randomly choosing an ingredient from the cocktail on show and using this ingredient to make another API call.
 
 ```
 getData(){
@@ -124,4 +125,4 @@ getData(){
 
 ### Future enhancements
 * Upgrading the API to allow searches by multiple ingredients.
-* Adding in failed search notifications.
+* Adding failed search notifications.
